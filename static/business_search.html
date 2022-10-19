@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="static/business_search.css" rel="stylesheet">
+        <title>
+            <title>My Business Search Website</title>
+        </title>
+    </head>
+    <body class="background"> 
+        <div class="fix">
+            <div class="page1">
+                <div class="p1_banner">
+                    <div class="p1_header">
+                        <h3>Business Search</h3>
+                        <h5>Fill out form to get businesses near you!</h5>
+                    </div>
+                </div>
+                <div>
+                    <form id = "myForm">
+                        <div>
+                            <div class="p1_input1">
+                                <label for="keyword" class="p1_inputFront">Keyword<label class="p1_star">*</label></label><br>
+                                <input type="text" id="keyword" name="keyword" required class="p1_inputBox1">
+                            </div>
+    
+                            <div class="p1_inputPart2">
+                                <div>
+                                    <label for="distance" class="p1_inputFront">Distance(miles)</label><br>
+                                    <input type="text" id="distance" name="distance" value = 10 placeholder = 10 required class="p1_inputBox2">
+                                </div>
+                                <div>
+                                    <label for="category" class="p1_inputFront">Category<label class="p1_star">*</label></label><br>
+                                    <select name="category" id="category" name="category" class="p1_inputBox3">
+                                        <option value="all", selected = "selected">Default</option>
+                                        <option value="arts">Arts & Entertainment</option>
+                                        <option value="health">Health & Medical</option>
+                                        <option value="hotelstravel">Hotels & Travel</option>
+                                        <option value="food">Food</option>
+                                        <option value="professional">Professional Services</option>
+                                    </select>
+                                </div>
+                            </div>
+        
+                            <label for="location" disabled class="p1_inputFront">Location<label class="p1_star">*</label></label><br>
+                            <input type="text" id="location" name="location" required class="p1_inputBox1">
+                        </div>
+                        <hr class="p1_hr">
+                        <div class="p1_checkPart">
+                            <label for="auto-detect" class="p1_checkBoxFront">Want us to auto-detect your location?Check here</label>
+                            <input type="checkbox" id="autocheck" name="autocheck">
+                        </div>
+                        <button id="submit" type = "button" class="p1_submitButton">SUBMIT</button>
+                        <button id="clear" type="button" class="p1_clearButton">CLEAR</button>
+                    </form>
+                </div>
+            </div>
+             <div id = "noData" class="noDataPage">No Records has been found</div>
+             <div id = "showData" class="page2">
+                    <table id="myTable">
+                        <tr class="p2_tableHeader">
+                            <th class="p2_bno">No.</th>
+                            <th class="p2_bi">Image</th>
+                            <th class="p2_bname cursor" id="BN">Business Name</th>
+                            <th class="p2_br cursor" id="BR">Rating</th>
+                            <th class="p2_bd cursor" id="Dis">Distance(miles)</th>
+                        </tr>
+                    </table>
+             </div>
+             <div id = "details" class="page3">
+                <div id="businessName" class="p3_bn"></div>
+                <hr class="p3_hr">
+                <div class="p3_middle">
+                    <div class="p3_items" id="p3_status">
+                        <h4>Status</h4><br>
+                        <div id="status"></div>
+                    </div>
+                    <div class="p3_items" id="p3_category">
+                        <h4>Category</h4><br>
+                        <div id="detailCategory"></div>
+                    </div>
+                    <div class="p3_items" id="p3_address">
+                        <h4>Address</h4><br>
+                        <div  id="address"></div>
+                    </div>
+                    <div class="p3_items" id="p3_phone">
+                        <h4>Phone Number</h4><br>
+                        <div id="phone"></div>
+                    </div>
+                    <div class="p3_items" id="p3_trans">
+                        <h4>Transactions Supported</h4><br>
+                        <div id="trans"></div>
+                    </div>
+                    <div class="p3_items" id="p3_price">
+                        <h4>Price</h4><br>
+                        <div id="price"></div>
+                    </div>
+                    <dive class="p3_items" id="p3_more">
+                        <h4>More info</h4><br>
+                        <div id="more"></div>
+                    </dive>
+                </div>
+                <div class="p3_bottom">
+                    <div class="p3_bottomBlock" id="p1block">
+                        <div id="p1"></div>
+                        <h4 class="p3_bottomFont">Photo1</h6>
+                    </div>
+                    <div class="p3_bottomBlock" id="p2block">
+                        <div id="p2"></div>
+                        <h4 class="p3_bottomFont">Photo2</h4>
+                    </div>
+                    <div class="p3_bottomBlock" id="p3block">
+                        <div id="p3"></div>
+                        <h4 class="p3_bottomFont">Photo3</h4>
+                    </div>
+                </div>
+             </div>     
+        </div>
+
+         <script type="text/javascript" src="static/business_search.js"></script>
+    </body>
+</html>
